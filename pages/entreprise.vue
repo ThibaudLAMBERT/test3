@@ -1,13 +1,13 @@
 <template>
     <div>
         <TcEntrepriseBanner />
-        <TcEntrepriseOrange />
-        <TcEntrepriseNetsf />
+        <TcEntrepriseAll />
     </div>
 </template>
 
 <script>
-import TcEntrepriseNetsf from '../components/TC/TcEntrepriseNetsf.vue';
+
+
 
 export default {
   scrollToTop: true,
@@ -23,7 +23,6 @@ export default {
   
   components: {
     TcEntrepriseBanner: () => import("@/components/TC/TcEntrepriseBanner"),
-    TcEntrepriseOrange: () => import("@/components/TC/TcEntrepriseOrange"),
-    TcEntrepriseNetsf: () => import("@/components/TC/TcEntrepriseNetsf")
+    TcEntrepriseAll: () => import("@/components/TC/TcEntrepriseAll"),
   }
 };
