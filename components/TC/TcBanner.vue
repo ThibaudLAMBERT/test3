@@ -19,6 +19,7 @@
                 bienvenue en telecommunications
               </h2>
               <p class="white--text op-8 font-weight-regular">
+                JE FAIS DES TESTS POUR VOIR SI CA MARCHE
                 Que vous sortiez fraîchement du FIMI ou bien que vous veniez
                 d'une autre école vous venez d'entamer une des plus belles
                 formations de France. Comment va se passer l'année ? Comment va
