@@ -63,10 +63,14 @@ export default {
       const nojekyllPath = path.join(generator.nuxt.options.generate.dir, ".nojekyll");
       const cnamePath = path.join(generator.nuxt.options.generate.dir, "CNAME");
 
+      console.log('Creating .nojekyll at:', nojekyllPath);
       fs.writeFileSync(nojekyllPath, "");
 
       if (!fs.existsSync(cnamePath)) {
+        console.log('Copying CNAME to:', cnamePath);
         fs.copyFileSync(path.resolve(__dirname, 'static', 'CNAME'), cnamePath);
+      } else {
+        console.log('CNAME already exists at:', cnamePath);
       }
     }
   },
