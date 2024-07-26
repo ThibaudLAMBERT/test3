@@ -10,7 +10,7 @@
     "start": "nuxt start",
     "generate": "nuxt generate",
     "post-generate": "node scripts/postgenerate.js",
-    "deploy": "nuxt generate && npx gh-pages -d dist"
+    "deploy": "nuxt generate && node CreateCNAME.js && npx gh-pages -d dist"
   },
   "dependencies": {
     "@nuxt/kit": "^3.6.5",
