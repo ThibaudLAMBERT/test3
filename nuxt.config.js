@@ -55,7 +55,17 @@ export default {
   build: {},
 
   generate: {
-    dir: "dist"
+    dir: "dist",
+    async done(generator) {
+      const nojekyllPath = path.join(generator.nuxt.options.generate.dir, ".nojekyll");
+      const cnamePath = path.join(generator.nuxt.options.generate.dir, "CNAME");
+
+      FileSystem.writeFileSync(nojekyllPath, "");
+
+      if (!FileSystem.existsSync(cnamePath)) {
+        FileSystem.copyFileSync(path.resolve(__dirname, 'static', 'CNAME'), cnamePath);
+      }
+    }
   },
   router: {
     base: '/test3/' // Remplacez 'nom-du-repo' par le nom de votre repository GitHub
