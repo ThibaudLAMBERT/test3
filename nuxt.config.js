@@ -1,3 +1,6 @@
+import path from 'path';
+import fs from 'fs';
+
 export default {
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
@@ -60,10 +63,10 @@ export default {
       const nojekyllPath = path.join(generator.nuxt.options.generate.dir, ".nojekyll");
       const cnamePath = path.join(generator.nuxt.options.generate.dir, "CNAME");
 
-      FileSystem.writeFileSync(nojekyllPath, "");
+      fs.writeFileSync(nojekyllPath, "");
 
-      if (!FileSystem.existsSync(cnamePath)) {
-        FileSystem.copyFileSync(path.resolve(__dirname, 'static', 'CNAME'), cnamePath);
+      if (!fs.existsSync(cnamePath)) {
+        fs.copyFileSync(path.resolve(__dirname, 'static', 'CNAME'), cnamePath);
       }
     }
   },
